@@ -1,13 +1,37 @@
 <script lang="ts">
+  import { createDeliveryClient } from '@kentico/kontent-delivery'
+  import { onMount } from 'svelte'
+
   import LayoutContainer from './components/atoms/LayoutContainer/LayoutContainer.svelte'
   import ProjectCard from './components/organisms/ProjectCard/ProjectCard.svelte'
+  import type { Item } from './types/project'
+
+  const deliveryClient = createDeliveryClient({
+    projectId: import.meta.env.VITE_KONENT_PROJECT_ID,
+  })
+
+  let projects: Item[]
+  onMount(async () => {
+    const response = await deliveryClient
+      .items<Item>()
+      .type('boring_barchart_projects')
+      .toPromise()
+    console.log(response.data.items)
+    projects = response.data.items.sort((a, b) =>
+      b.elements.published.value!.localeCompare(a.elements.published.value!)
+    )
+  })
 </script>
 
 <main>
   <LayoutContainer>
-    <ProjectCard cardTitle="My first project" />
-    <ProjectCard cardTitle="My second project" />
-    <ProjectCard cardTitle="My third project and more" />
+    {#if projects}
+      {#each projects as project}
+        <ProjectCard cardTitle={project.elements.title.value} />
+      {/each}
+    {:else}
+      Loading...
+    {/if}
   </LayoutContainer>
 </main>
 
