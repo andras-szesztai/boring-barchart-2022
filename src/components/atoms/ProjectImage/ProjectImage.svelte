@@ -13,7 +13,7 @@
     overflow: hidden;
     position: relative;
 
-    height: 96px;
+    height: 144px;
   }
 
   img {
