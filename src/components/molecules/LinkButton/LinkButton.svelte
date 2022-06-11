@@ -12,7 +12,7 @@
   a {
     text-decoration: none;
     border: 3px solid var(--black);
-    background-color: #fff;
+
     color: var(--black);
     font-weight: 700;
     align-self: flex-start;

@@ -18,7 +18,7 @@
 
 <style>
   .main-container {
-    background-color: #ffffff;
+    background-color: var(--white);
     border: 3px solid var(--black);
     border-radius: 8px;
     padding: 16px;

@@ -19,6 +19,7 @@
     background-color: var(--secondary);
     color: var(--black);
 
+    --primary: #c284f7;
     --secondary: #f0ede8;
     --black: #0a0a0d;
     --white: #ffffff;
