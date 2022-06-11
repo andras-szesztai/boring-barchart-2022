@@ -1,4 +1,5 @@
 <script lang="ts">
+  import LinkButton from '../../molecules/LinkButton/LinkButton.svelte'
   import ProjectImage from '../../atoms/ProjectImage/ProjectImage.svelte'
   import ProjectTitle from '../../atoms/ProjectTitle/ProjectTitle.svelte'
 
@@ -8,6 +9,7 @@
 <div class="main-container">
   <ProjectImage src="https://www.fillmurray.com/640/360" />
   <ProjectTitle title={cardTitle} />
+  <LinkButton href="https://www.fillmurray.com/640/360" />
 </div>
 
 <style>
@@ -21,6 +23,6 @@
     flex-direction: column;
     gap: 12px;
 
-    box-shadow: 4px 4px 0px 0px #000;
+    box-shadow: 4px 4px 0px 0px #0a0a0d;
   }
 </style>
