@@ -4,7 +4,7 @@
   </div>
 </div>
 
-<style>
+<style lang="scss">
   .main-container {
     width: 100%;
     display: grid;
@@ -17,7 +17,12 @@
     width: 100%;
     place-self: stretch;
     grid-template-columns: 1fr;
-    padding: 36px;
-    gap: 36px;
+    padding: 24px;
+    gap: 24px;
+
+    @media only screen and (min-width: 320px) {
+      padding: 36px;
+      gap: 36px;
+    }
   }
 </style>

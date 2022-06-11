@@ -8,7 +8,7 @@
   {/each}
 </div>
 
-<style>
+<style lang="scss">
   .pill-container {
     display: flex;
     flex-wrap: wrap;

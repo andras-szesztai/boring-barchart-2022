@@ -16,17 +16,23 @@
   <LinkButton href={elements.url.value} />
 </div>
 
-<style>
+<style lang="scss">
   .main-container {
     background-color: var(--white);
     border: 3px solid var(--black);
     border-radius: 8px;
-    padding: 16px;
 
     display: flex;
     flex-direction: column;
-    gap: 16px;
 
-    box-shadow: 8px 8px 0px 0px var(--black);
+    padding: 12px;
+    gap: 12px;
+    box-shadow: 4px 4px 0px 0px var(--black);
+
+    @media only screen and (min-width: 320px) {
+      padding: 16px;
+      gap: 16px;
+      box-shadow: 8px 8px 0px 0px var(--black);
+    }
   }
 </style>
