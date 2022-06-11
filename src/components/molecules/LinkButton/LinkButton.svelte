@@ -11,14 +11,11 @@
 <style>
   a {
     text-decoration: none;
-    border: 3px solid var(--black);
 
     color: var(--black);
     font-weight: 700;
-    align-self: flex-start;
     display: flex;
     align-items: center;
-    padding: 4px 8px;
     border-radius: 6px;
     gap: 8px;
   }

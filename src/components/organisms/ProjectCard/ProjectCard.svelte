@@ -3,24 +3,17 @@
   import ProjectImage from '../../atoms/ProjectImage/ProjectImage.svelte'
   import ProjectTitle from '../../atoms/ProjectTitle/ProjectTitle.svelte'
   import TagPills from '../../molecules/TagPills/TagPills.svelte'
+  import type { TProject } from 'src/types/project'
 
-  export let cardTitle: string
+  export let project: TProject
+  const { elements } = project
 </script>
 
 <div class="main-container">
-  <ProjectImage src="https://www.fillmurray.com/640/360" />
-  <ProjectTitle title={cardTitle} />
-  <TagPills
-    tags={[
-      'nextjs',
-      'graphql',
-      'browserstack',
-      'codegen',
-      'ts',
-      'neobrutalism',
-    ]}
-  />
-  <LinkButton href="https://www.fillmurray.com/640/360" />
+  <ProjectImage src={elements.screenshot.value[0].url} />
+  <ProjectTitle title={elements.title.value} />
+  <TagPills tags={elements.tags.value.split(',')} />
+  <LinkButton href={elements.url.value} />
 </div>
 
 <style>
@@ -34,6 +27,6 @@
     flex-direction: column;
     gap: 16px;
 
-    box-shadow: 4px 4px 0px 0px var(--black);
+    box-shadow: 8px 8px 0px 0px var(--black);
   }
 </style>

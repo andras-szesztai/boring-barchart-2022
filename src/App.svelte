@@ -3,20 +3,20 @@
   import { onMount } from 'svelte'
 
   import LayoutContainer from './components/atoms/LayoutContainer/LayoutContainer.svelte'
+  import ProjectTitle from './components/atoms/ProjectTitle/ProjectTitle.svelte'
   import ProjectCard from './components/organisms/ProjectCard/ProjectCard.svelte'
-  import type { Item } from './types/project'
+  import type { TProject } from './types/project'
 
   const deliveryClient = createDeliveryClient({
     projectId: import.meta.env.VITE_KONENT_PROJECT_ID,
   })
 
-  let projects: Item[]
+  let projects: TProject[]
   onMount(async () => {
     const response = await deliveryClient
-      .items<Item>()
+      .items<TProject>()
       .type('boring_barchart_projects')
       .toPromise()
-    console.log(response.data.items)
     projects = response.data.items.sort((a, b) =>
       b.elements.published.value!.localeCompare(a.elements.published.value!)
     )
@@ -27,10 +27,10 @@
   <LayoutContainer>
     {#if projects}
       {#each projects as project}
-        <ProjectCard cardTitle={project.elements.title.value} />
+        <ProjectCard {project} />
       {/each}
     {:else}
-      Loading...
+      <ProjectTitle title="Loading..." />
     {/if}
   </LayoutContainer>
 </main>

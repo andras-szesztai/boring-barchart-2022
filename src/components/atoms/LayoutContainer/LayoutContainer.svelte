@@ -18,6 +18,6 @@
     place-self: stretch;
     grid-template-columns: 1fr;
     padding: 36px;
-    gap: 24px;
+    gap: 36px;
   }
 </style>
