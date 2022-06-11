@@ -8,7 +8,7 @@
 
 <style>
   .container {
-    border: 3px solid #0a0a0d;
+    border: 3px solid var(--black);
     border-radius: 6px;
     overflow: hidden;
     position: relative;

@@ -11,9 +11,9 @@
 <style>
   a {
     text-decoration: none;
-    border: 3px solid #0a0a0d;
+    border: 3px solid var(--black);
     background-color: #fff;
-    color: #0a0a0d;
+    color: var(--black);
     font-weight: 700;
     align-self: flex-start;
     display: flex;

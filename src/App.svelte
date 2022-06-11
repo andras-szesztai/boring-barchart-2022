@@ -16,8 +16,12 @@
     font-family: brevia, sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: #f0ede8;
-    color: #0a0a0d;
+    background-color: var(--secondary);
+    color: var(--black);
+
+    --secondary: #f0ede8;
+    --black: #0a0a0d;
+    --white: #ffffff;
   }
 
   *,

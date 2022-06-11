@@ -15,7 +15,7 @@
 <style>
   .main-container {
     background-color: #ffffff;
-    border: 3px solid #0a0a0d;
+    border: 3px solid var(--black);
     border-radius: 8px;
     padding: 16px;
 
@@ -23,6 +23,6 @@
     flex-direction: column;
     gap: 12px;
 
-    box-shadow: 4px 4px 0px 0px #0a0a0d;
+    box-shadow: 4px 4px 0px 0px var(--black);
   }
 </style>
