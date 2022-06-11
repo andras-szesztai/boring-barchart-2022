@@ -75,4 +75,8 @@
   #__next {
     isolation: isolate;
   }
+
+  main {
+    user-select: none;
+  }
 </style>

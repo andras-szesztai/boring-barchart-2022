@@ -1,10 +1,10 @@
 <script lang="ts">
-  export let stack: string[]
+  export let tags: string[]
 </script>
 
 <div class="pill-container">
-  {#each stack as stack}
-    <span class="pill">{stack}</span>
+  {#each tags as tag}
+    <span class="pill">{tag}</span>
   {/each}
 </div>
 

@@ -2,7 +2,7 @@
   import LinkButton from '../../molecules/LinkButton/LinkButton.svelte'
   import ProjectImage from '../../atoms/ProjectImage/ProjectImage.svelte'
   import ProjectTitle from '../../atoms/ProjectTitle/ProjectTitle.svelte'
-  import StackPills from '../../molecules/StackPills/StackPills.svelte'
+  import TagPills from '../../molecules/TagPills/TagPills.svelte'
 
   export let cardTitle: string
 </script>
@@ -10,8 +10,15 @@
 <div class="main-container">
   <ProjectImage src="https://www.fillmurray.com/640/360" />
   <ProjectTitle title={cardTitle} />
-  <StackPills
-    stack={['nextjs', 'graphql', 'browserstack', 'codegen', 'neobrutalism']}
+  <TagPills
+    tags={[
+      'nextjs',
+      'graphql',
+      'browserstack',
+      'codegen',
+      'ts',
+      'neobrutalism',
+    ]}
   />
   <LinkButton href="https://www.fillmurray.com/640/360" />
 </div>

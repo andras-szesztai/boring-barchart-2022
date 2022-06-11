@@ -20,11 +20,16 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-svelte3": "^4.0.0",
+    "node-sass": "^7.0.1",
+    "sass": "^1.52.3",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.7",
     "svelte-preprocess": "^4.9.8",
     "tslib": "^2.3.1",
     "typescript": "^4.5.4",
     "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "@kentico/kontent-delivery": "^11.13.0"
   }
 }
