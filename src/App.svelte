@@ -3,9 +3,11 @@
   import { onMount } from 'svelte'
 
   import LayoutContainer from './components/atoms/LayoutContainer/LayoutContainer.svelte'
+  import LoadingContainer from './components/atoms/LoadingContainer/LoadingContainer.svelte'
   import ProjectTitle from './components/atoms/ProjectTitle/ProjectTitle.svelte'
   import ContactCard from './components/organisms/ContactCard/ContactCard.svelte'
   import ProjectCard from './components/organisms/ProjectCard/ProjectCard.svelte'
+
   import type { TProject } from './types/project'
 
   const deliveryClient = createDeliveryClient({
@@ -31,7 +33,9 @@
         <ProjectCard {project} />
       {/each}
     {:else}
-      <ProjectTitle title="Loading..." />
+      <LoadingContainer>
+        <ProjectTitle title="Loading..." />
+      </LoadingContainer>
     {/if}
   </LayoutContainer>
   <ContactCard />
