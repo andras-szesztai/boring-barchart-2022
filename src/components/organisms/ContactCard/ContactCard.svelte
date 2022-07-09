@@ -14,9 +14,8 @@
 <style lang="scss">
   div {
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    display: grid;
+    justify-items: end;
     gap: 8px;
 
     top: 12px;
