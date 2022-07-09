@@ -4,7 +4,7 @@
 
   import LayoutContainer from './components/atoms/LayoutContainer/LayoutContainer.svelte'
   import ProjectTitle from './components/atoms/ProjectTitle/ProjectTitle.svelte'
-import ContactCard from './components/organisms/ContactCard/ContactCard.svelte';
+  import ContactCard from './components/organisms/ContactCard/ContactCard.svelte'
   import ProjectCard from './components/organisms/ProjectCard/ProjectCard.svelte'
   import type { TProject } from './types/project'
 
@@ -27,17 +27,17 @@ import ContactCard from './components/organisms/ContactCard/ContactCard.svelte';
 <main>
   <LayoutContainer>
     {#if projects}
-    {#each projects as project}
-    <ProjectCard {project} />
-    {/each}
+      {#each projects as project}
+        <ProjectCard {project} />
+      {/each}
     {:else}
-    <ProjectTitle title="Loading..." />
+      <ProjectTitle title="Loading..." />
     {/if}
   </LayoutContainer>
-  <ContactCard/>
+  <ContactCard />
 </main>
 
-<style global>
+<style global lang="scss">
   :root {
     font-family: brevia, sans-serif;
     font-weight: 400;
@@ -104,5 +104,19 @@ import ContactCard from './components/organisms/ContactCard/ContactCard.svelte';
 
   main {
     user-select: none;
+  }
+
+  html {
+    scrollbar-color: var(--black) var(--white);
+  }
+  html::-webkit-scrollbar {
+    width: 8px;
+  }
+  html::-webkit-scrollbar-thumb {
+    background: var(--black);
+    border-radius: 8px;
+  }
+  html::-webkit-scrollbar-track {
+    background: var(--white);
   }
 </style>
