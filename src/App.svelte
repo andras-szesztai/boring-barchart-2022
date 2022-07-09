@@ -4,6 +4,7 @@
 
   import LayoutContainer from './components/atoms/LayoutContainer/LayoutContainer.svelte'
   import ProjectTitle from './components/atoms/ProjectTitle/ProjectTitle.svelte'
+import ContactCard from './components/organisms/ContactCard/ContactCard.svelte';
   import ProjectCard from './components/organisms/ProjectCard/ProjectCard.svelte'
   import type { TProject } from './types/project'
 
@@ -26,13 +27,14 @@
 <main>
   <LayoutContainer>
     {#if projects}
-      {#each projects as project}
-        <ProjectCard {project} />
-      {/each}
+    {#each projects as project}
+    <ProjectCard {project} />
+    {/each}
     {:else}
-      <ProjectTitle title="Loading..." />
+    <ProjectTitle title="Loading..." />
     {/if}
   </LayoutContainer>
+  <ContactCard/>
 </main>
 
 <style global>
