@@ -8,8 +8,13 @@
   .main-container {
     width: 100%;
     display: grid;
-    justify-content: stretch;
     position: relative;
+
+    justify-content: stretch;
+
+    @media only screen and (min-width: 1040px) {
+      justify-content: center;
+    }
   }
 
   .content-container {
@@ -23,6 +28,18 @@
     @media only screen and (min-width: 320px) {
       padding: 36px;
       gap: 36px;
+    }
+
+    @media only screen and (min-width: 720px) {
+      padding: 48px;
+      gap: 48px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (min-width: 1040px) {
+      padding: 64px;
+      gap: 64px;
+      max-width: 1240px;
     }
   }
 </style>
